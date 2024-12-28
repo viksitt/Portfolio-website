@@ -1,0 +1,142 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e3eb;
+    color: #333;
+}
+.header {
+    background: #6174d3;
+    color: #fff;
+    padding: 1rem 0;
+}
+.header .logo {
+    margin: 0;
+    text-align: center;
+    font-size: 4rem;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.nav ul li {
+    margin: 0 1rem;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.about-section, .projects-section, .contact-section {
+    padding: 3rem;
+    text-align: center;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.project img {
+    width: 600%;
+    border-radius: 13px;
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    background: #6174d3;
+    color: #fff;
+    cursor: pointer;
+}
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #6174d3;
+    color: #fff;
+}
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes rotateIn {
+    from { transform: rotate(-180deg); opacity: 0; }
+    to { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes gradientBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Apply animations */
+body {
+    background: linear-gradient(-45deg, #648cd7, #edefef, #6d6bea, #67a4d9);
+    background-size: 400% 400%;
+    animation: gradientBg 10s ease infinite;
+}
+
+.header {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.projects-section {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.contact-section {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.profile-pic {
+    animation: rotateIn 2s ease-in-out;
+}
+
+.project {
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    animation: zoomIn 1.2s ease-in-out;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6a11cb;
+    color: white;
+}
